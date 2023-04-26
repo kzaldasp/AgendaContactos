@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">AgendaContactos</string>
+
+    <string name="hint_nombres">Nombre</string>
+    <string name="hint_telefono">Telefono</string>
+    <string name="hint_direccion">Direccion</string>
+    <string name="hint_correo">Correo</string>
+
+
+
+    <string name="btn_eliminar">Eliminar</string>
+    <string name="btn_guardar">Guardar</string>
+    <string name="btn_cancelar">Cancelar</string>
+
+</resources>
