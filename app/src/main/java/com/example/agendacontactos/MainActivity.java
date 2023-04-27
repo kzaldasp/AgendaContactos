@@ -2,6 +2,7 @@ package com.example.agendacontactos;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -34,11 +35,20 @@ public class MainActivity extends AppCompatActivity {
 
         if (result>0){
             limpiar();
-            Toast.makeText(MainActivity.this, "Contacto Agregado.",Toast.LENGTH_LONG).show();
+            Toast.makeText(MainActivity.this, "Contacto Agregado. "+result,Toast.LENGTH_LONG).show();
+            // Señalizar que se debe actualizar la información al volver al primer activity
+            Intent intent = new Intent(this, tabla.class);
+            intent.putExtra("update", "true");
+            startActivity(intent);
         }else{
             Toast.makeText(MainActivity.this, "Contacto NO Agregado",Toast.LENGTH_LONG).show();
         }
 
+    }
+
+    public void startTabla(View view){
+        Intent intent = new Intent(this, tabla.class);
+        startActivity(intent);
     }
 
     public void limpiar(){

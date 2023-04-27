@@ -7,4 +7,43 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="light_gray">#ECECEC</color>
+    <color name="grey_500">#9e9e9e</color>
+
+
+    <!-- Colors -->
+
+    <color name="yellow">#FFCA00</color>
+    <color name="orange">#FF6732</color>
+    <color name="cyan">#00F2FF</color>
+    <color name="dark_grey">#2A2F3D</color>
+
+    <color name="blue_700">#2962FF</color>
+    <color name="blue_200">#90CAF9</color>
+
+    <!-- Light theme colors -->
+    <color name="color_primary">#009688</color>
+    <color name="color_primary_variant">#00796B</color>
+    <color name="color_on_primary">#FFFFFF</color>
+    <color name="color_secondary">#F44336</color>
+    <color name="color_on_secondary">#FFFFFF</color>
+    <color name="color_surface">#FFFFFF</color>
+    <color name="color_on_surface">#000000</color>
+    <color name="color_background">#F5F5F5</color>
+    <color name="color_on_background">#000000</color>
+    <color name="color_error">#B00020</color>
+    <color name="color_on_error">#FFFFFF</color>
+
+    <!-- Dark theme colors -->
+    <color name="color_primary_dark">#00796B</color>
+    <color name="color_primary_variant_dark">#005B4F</color>
+    <color name="color_on_primary_dark">#FFFFFF</color>
+    <color name="color_secondary_dark">#F44336</color>
+    <color name="color_on_secondary_dark">#FFFFFF</color>
+    <color name="color_surface_dark">#121212</color>
+    <color name="color_on_surface_dark">#FFFFFF</color>
+    <color name="color_background_dark">#1E1E1E</color>
+    <color name="color_on_background_dark">#FFFFFF</color>
+    <color name="color_error_dark">#CF6679</color>
+    <color name="color_on_error_dark">#FFFFFF</color>
 </resources>

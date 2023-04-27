@@ -40,9 +40,18 @@ public class Contacto {
         this.correo = correo;
     }
 
+    private String id;
     private String nombre;
-    private String direccion;
     private String telefono;
+    private String direccion;
+
     private String correo;
 
+    public Contacto(String id, String nombre, String telefono, String direccion, String correo) {
+        this.id = id;
+        this.nombre = nombre;
+        this.telefono = telefono;
+        this.direccion = direccion;
+        this.correo = correo;
+    }
 }

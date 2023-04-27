@@ -2,6 +2,7 @@ package com.example.agendacontactos.db;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -44,5 +45,23 @@ public class DbHelper extends SQLiteOpenHelper {
         cv.put("correo",contacto.getCorreo());
 
         return db.insert(TABLE_CONTACTOS,null,cv);
+    }
+
+    public Cursor readAllContactos(){
+        SQLiteDatabase db = this.getReadableDatabase();
+        if(db != null){
+            return db.rawQuery("SELECT * FROM "+TABLE_CONTACTOS, null);
+        }
+        return null;
+    }
+
+    public Cursor readContacto(String busqueda){
+        SQLiteDatabase db = this.getReadableDatabase();
+        if(db != null){
+            return db.rawQuery("SELECT * FROM "+TABLE_CONTACTOS+" WHERE nombre LIKE '%"+busqueda+"%' " +
+                    "OR direccion LIKE '%"+busqueda+"%' OR telefono LIKE '%"+busqueda+"%'" +
+                    "OR correo LIKE '%"+busqueda+"%'", null);
+        }
+        return null;
     }
 }

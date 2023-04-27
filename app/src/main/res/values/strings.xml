@@ -5,11 +5,13 @@
     <string name="hint_telefono">Telefono</string>
     <string name="hint_direccion">Direccion</string>
     <string name="hint_correo">Correo</string>
-
+    <string name="hint_busqueda">Busqueda</string>
 
 
     <string name="btn_eliminar">Eliminar</string>
     <string name="btn_guardar">Guardar</string>
     <string name="btn_cancelar">Cancelar</string>
+    <string name="btn_agregar">Agregar</string>
+    <string name="btn_buscar">Buscar</string>
 
 </resources>
