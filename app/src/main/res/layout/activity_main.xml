@@ -23,7 +23,7 @@
             android:ems="10"
             android:hint="@string/hint_nombres"
             android:inputType="textPersonName"
-            android:layout_marginHorizontal="45px"
+            android:layout_marginHorizontal="65px"
             android:layout_marginTop="90px"
             android:layout_marginBottom="25px"
             />
@@ -34,9 +34,10 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/hint_telefono"
-            android:inputType="textPersonName"
-            android:layout_marginHorizontal="45px"
+            android:inputType="phone"
+            android:layout_marginHorizontal="65px"
             android:layout_marginVertical="25px"
+
             />
 
         <EditText
@@ -45,8 +46,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/hint_direccion"
-            android:inputType="textPersonName"
-            android:layout_marginHorizontal="45px"
+            android:inputType="textEmailAddress"
+            android:layout_marginHorizontal="65px"
             android:layout_marginVertical="25px"
             />
 
@@ -56,15 +57,17 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/hint_correo"
-            android:inputType="textPersonName"
-            android:layout_marginHorizontal="45px"
+            android:inputType="textEmailAddress"
+            android:layout_marginHorizontal="65px"
             android:layout_marginVertical="25px"
             />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_margin="45px"
+            >
 
             <Button
                 android:id="@+id/button"
@@ -92,8 +95,10 @@
             android:text="@string/btn_cancelar"
             android:layout_marginVertical="15px"
             android:layout_marginHorizontal="120px"
-            android:theme="@style/BotonCancelar"
-            />
+           />
+
+
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
