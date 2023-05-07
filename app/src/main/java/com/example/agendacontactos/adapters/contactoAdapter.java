@@ -1,6 +1,7 @@
 package com.example.agendacontactos.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.agendacontactos.MainActivity;
 import com.example.agendacontactos.R;
 import com.example.agendacontactos.db.Contacto;
 
@@ -37,6 +39,18 @@ public class contactoAdapter extends RecyclerView.Adapter<contactoAdapter.myView
         holder.txt_correo.setText(contactos.get(position).getCorreo());
         holder.txt_telefono.setText(contactos.get(position).getTelefono());
         holder.txt_direccion.setText(contactos.get(position).getDireccion());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, MainActivity.class);
+                intent.putExtra("id",contactos.get(position).getId());
+                intent.putExtra("nombre",contactos.get(position).getNombre());
+                intent.putExtra("telefono",contactos.get(position).getTelefono());
+                intent.putExtra("direccion",contactos.get(position).getDireccion());
+                intent.putExtra("correo",contactos.get(position).getCorreo());
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override

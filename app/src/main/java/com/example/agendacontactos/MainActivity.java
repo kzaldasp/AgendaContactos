@@ -14,6 +14,7 @@ import com.example.agendacontactos.db.DbHelper;
 public class MainActivity extends AppCompatActivity {
 
     EditText txt_nombre, txt_telefono,txt_direccion,txt_correo;
+    Boolean modo;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +24,16 @@ public class MainActivity extends AppCompatActivity {
         txt_telefono = findViewById(R.id.txt_telefono);
         txt_direccion = findViewById(R.id.txt_direccion);
         txt_correo = findViewById(R.id.txt_correo);
+        modo = true;
+        if (getIntent().hasExtra("id")){
+            Bundle bundle = getIntent().getExtras();
+            txt_nombre.setText(bundle.getString("nombre"));
+            txt_telefono.setText(bundle.getString("telefono"));
+            txt_direccion.setText(bundle.getString("direccion"));
+            txt_correo.setText(bundle.getString("correo"));
+            modo = false;
+        }
+
     }
 
     public void onClick_AddContacto(View view){
