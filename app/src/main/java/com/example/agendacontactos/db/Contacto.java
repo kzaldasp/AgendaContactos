@@ -40,13 +40,6 @@ public class Contacto {
         this.correo = correo;
     }
 
-    private String id;
-    private String nombre;
-    private String telefono;
-    private String direccion;
-
-    private String correo;
-
     public String getId() {
         return id;
     }
@@ -54,6 +47,15 @@ public class Contacto {
     public void setId(String id) {
         this.id = id;
     }
+
+    private String id;
+    private String nombre;
+    private String telefono;
+    private String direccion;
+
+    private String correo;
+
+
 
     public Contacto(String id, String nombre, String telefono, String direccion, String correo) {
         this.id = id;

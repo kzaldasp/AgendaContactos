@@ -5,17 +5,22 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
+
+import com.example.agendacontactos.MainActivity;
 
 public class DbHelper extends SQLiteOpenHelper {
 
     private static final int DATABASE_VERSION = 1;
     private static String DATABASE_NAME = "agenda.db";
     public static final String TABLE_CONTACTOS = "t_contactos";
-
+    Context context;
     public DbHelper(@Nullable Context context) {
+
         super(context, DATABASE_NAME   , null , DATABASE_VERSION);
+        this.context=context;
     }
 
     @Override
@@ -63,5 +68,23 @@ public class DbHelper extends SQLiteOpenHelper {
                     "OR correo LIKE '%"+busqueda+"%'", null);
         }
         return null;
+    }
+    public long updateData(Contacto contacto){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put( "nombre",contacto.getNombre());
+        cv.put( "telefono",contacto.getTelefono());
+        cv.put("direccion",contacto.getDireccion() );
+        cv.put("correo",contacto.getCorreo());
+
+       return db.update(TABLE_CONTACTOS, cv, "id=?",new String[]{contacto.getId()});
+
+    }
+
+    public long deleteData(String id){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        return db.delete(TABLE_CONTACTOS, "id=?",new String[]{id});
+
     }
 }
